@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LKE-32</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">SAKIP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">PEKPPP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rbzi.html">WBK-WBBM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="sakip.html">SAKIP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pss.html">P S S</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="postat.html">Pojok Statistik</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cantik.html">Desa Cantik</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="epss.html">E P S S</a>
+                    </li>
+                    <!-- New Theme Settings Nav Item -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#themeSettingsModal">Theme</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-4">
+        <!-- Tab Navigation -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="true">Komponen 1</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="false">Komponen 2</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab" aria-controls="tab3" aria-selected="false">Komponen 3</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab4-tab" data-bs-toggle="tab" data-bs-target="#tab4" type="button" role="tab" aria-controls="tab4" aria-selected="false">Komponen 4</button>
+            </li>
+        </ul>
+
+        <!-- Tab Content - Content will be dynamically loaded by JavaScript -->
+        <div class="tab-content border border-top-0 p-3" id="myTabContent">
+            <!-- Komponen 1 -->
+            <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                <h3>Komponen 1. PERENCANAAN KINERJA</h3>
+                <br>
+                <div class="accordion" id="accordionTab1">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading1Tab1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1Tab1" aria-expanded="true" aria-controls="collapse1Tab1">
+                                Dokumen Perencanaan kinerja telah tersedia
+                            </button>
+                        </h2>
+                        <div id="collapse1Tab1" class="accordion-collapse collapse" aria-labelledby="heading1Tab1" data-bs-parent="#accordionTab1">
+                            <div class="accordion-body">
+                                <br>
+                                <ol>
+                                    <li>Terdapat pedoman teknis perencanaan kinerja.</li>
+                                    <li>Terdapat dokumen perencanaan kinerja jangka panjang.</li>
+                                    <li>Terdapat dokumen perencanaan kinerja jangka menengah.</li>
+                                    <li>Terdapat dokumen perencanaan kinerja jangka pendek.</li>
+                                    <li>Terdapat dokumen perencanaan aktivitas yang mendukung kinerja.</li>
+                                    <li>Terdapat dokumen perencanaan anggaran yang mendukung kinerja.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading2Tab1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2Tab1" aria-expanded="false" aria-controls="collapse2Tab1">
+                                Dokumen Perencanaan kinerja telah memenuhi standar yang baik, yaitu untuk mencapai hasil, dengan ukuran kinerja yang SMART, menggunakan penyelarasan (cascading) disetiap level secara logis, serta memperhatikan kinerja bidang lain (crosscutting)
+                            </button>
+                        </h2>
+                        <div id="collapse2Tab1" class="accordion-collapse collapse" aria-labelledby="heading2Tab1" data-bs-parent="#accordionTab1">
+                            <div class="accordion-body">
+                                <br>
+                                <ol>
+                                    <li>Dokumen Perencanaan Kinerja telah diformalkan.</li>
+                                    <li>Dokumen Perencanaan Kinerja telah dipublikasikan tepat waktu</li>
+                                    <li>Dokumen Perencanaan Kinerja telah menggambarkan Kebutuhan atas Kinerja sebenarnya yang perlu dicapai</li>
+                                    <li>Kualitas Rumusan Hasil (Tujuan/Sasaran) telah jelas menggambarkan kondisi kinerja yang akan dicapai</li>
+                                    <li>Ukuran Keberhasilan (Indikator Kinerja) telah memenuhi kriteria SMART</li>
+                                    <li>Indikator Kinerja Utama (IKU) telah menggambarkan kondisi Kinerja Utama yang harus dicapai, tertuang secara berkelanjutan (sustainable - tidak sering diganti dalam 1 periode Perencanaan Strategis)</li>
+                                    <li>Target yang ditetapkan dalam Perencanaan Kinerja dapat dicapai (achievable), menantang, dan realistis.</li>
+                                    <li>Setiap Dokumen Perencanaan Kinerja menggambarkan hubungan yang berkesinambungan, serta selaras antara Kondisi/Hasil yang akan dicapai di setiap level jabatan (Cascading)</li>
+                                    <li>Perencanaan kinerja dapat memberikan informasi tentang hubungan kinerja, strategi, kebijakan, bahkan aktivitas antar bidang/dengan tugas dan fungsi lain yang berkaitan (Crosscutting)</li>
+                                    <li>Setiap unit/satuan kerja merumuskan dan menetapkan Perencanaan Kinerja</li>
+                                    <li>Setiap pegawai merumuskan dan menetapkan Perencanaan Kinerja.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading3Tab1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3Tab1" aria-expanded="false" aria-controls="collapse3Tab1">
+                                Perencanaan Kinerja telah dimanfaatkan untuk mewujudkan hasil yang berkesinambungan
+                            </button>
+                        </h2>
+                        <div id="collapse3Tab1" class="accordion-collapse collapse" aria-labelledby="heading3Tab1" data-bs-parent="#accordionTab1">
+                            <div class="accordion-body">
+                                <br>
+                                <ol>
+                                    <li>Anggaran yang ditetapkan telah mengacu pada Kinerja yang ingin dicapai.</li>
+                                    <li>Aktivitas yang dilaksanakan telah mendukung Kinerja yang ingin dicapai</li>
+                                    <li>Target yang ditetapkan dalam Perencanaan Kinerja telah dicapai dengan baik, atau setidaknya masih on the right track</li>
+                                    <li>Rencana aksi kinerja dapat berjalan dinamis karena capaian kinerja selalu dipantau secara berkala</li>
+                                    <li>Terdapat perbaikan/penyempurnaan Dokumen Perencanaan Kinerja yang ditetapkan dari hasil analisis perbaikan kinerja sebelumnya</li>
+                                    <li>Terdapat perbaikan/penyempurnaan Dokumen Perencanaan Kinerja dalam mewujudkan kondisi/hasil yang lebih baik</li>
+                                    <li>Setiap unit/satuan kerja memahami dan peduli, serta berkomitmen dalam mencapai kinerja yang telah direncanakan</li>
+                                    <li>Setiap Pegawai memahami dan peduli, serta berkomitmen dalam mencapai kinerja yang telah direncanakan</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Komponen 2 -->
+            <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                <h3>Komponen 2. PENGUKURAN KINERJA</h3>
+                <div class="accordion" id="accordionTab2">
+                    <!-- 10 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading1Tab2">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1Tab2" aria-expanded="true" aria-controls="collapse1Tab2">
+                                Pengukuran Kinerja telah dilakukan
+                            </button>
+                        </h2>
+                        <div id="collapse1Tab2" class="accordion-collapse collapse" aria-labelledby="heading1Tab2" data-bs-parent="#accordionTab2">
+                            <div class="accordion-body">
+                                <br>
+                                <ol>
+                                    <li>Terdapat pedoman teknis pengukuran kinerja dan pengumpulan data kinerja</li>
+                                    <li>Terdapat Definisi Operasional yang jelas atas kinerja dan cara mengukur indikator kinerja</li>
+                                    <li>Terdapat mekanisme yang jelas terhadap pengumpulan data kinerja yang dapat diandalkan</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 11 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading2Tab2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2Tab2" aria-expanded="false" aria-controls="collapse2Tab2">
+                                Pengukuran Kinerja telah menjadi kebutuhan dalam mewujudkan Kinerja secara Efektif dan Efisien dan telah dilakukan secara berjenjang dan berkelanjutan
+                            </button>
+                        </h2>
+                        <div id="collapse2Tab2" class="accordion-collapse collapse" aria-labelledby="heading2Tab2" data-bs-parent="#accordionTab2">
+                            <div class="accordion-body">
+                                <br>
+                                <ol>
+                                    <li>Pimpinan selalu teribat sebagai pengambil keputusan (Decision Maker) dalam mengukur capaian</li>
+                                    <li>Data kinerja yang dikumpulkan telah relevan untuk mengukur capaian kinerja yang diharapkan</li>
+                                    <li>Data kinerja yang dikumpulkan telah mendukung capaian kinerja yang diharapkan</li>
+                                    <li>Pengukuran kinerja telah dilakukan secara berkala</li>
+                                    <li>Setiap level organisasi melakukan pemantauan atas pengukuran capaian kinerja unit dibawahnya secara berjenjang</li>
+                                    <li>Pengumpulan data kinerja dan pengukuran capaian kinerja telah memanfaatkan Teknologi Informasi (Aplikasi)</li>
+                                    <li>Pengukuran capaian kinerja telah memanfaatkan Teknologi Informasi (Aplikasi)</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 12 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading3Tab2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3Tab2" aria-expanded="false" aria-controls="collapse3Tab2">
+                                Pengukuran Kinerja telah dijadikan dasar dalam pemberian Reward dan Punishment, serta penyesuaian strategi dalam mencapai kinerja yang efektif dan efisien
+                            </button>
+                        </h2>
+                        <div id="collapse3Tab2" class="accordion-collapse collapse" aria-labelledby="heading3Tab2" data-bs-parent="#accordionTab2">
+                            <div class="accordion-body">
+                                <br>
+                                <ol>
+                                    <li>Pengukuran Kinerja telah menjadi dasar dalam penyesuaian (pemberian/pengurangan) tunjangan kinerja/penghasilan</li>
+                                    <li>Pengukuran Kinerja telah menjadi dasar dalam penempatan/penghapusan Jabatan baik struktural maupun fungsional</li>
+                                    <li>Pengukuran kinerja telah mempengaruhi penyesuaian (Refocusing) Organisasi</li>
+                                    <li>Pengukuran kinerja telah mempengaruhi penyesuaian Strategi dalam mencapai kinerja</li>
+                                    <li>Pengukuran kinerja telah mempengaruhi penyesuaian Kebijakan dalam mencapai kinerja</li>
+                                    <li>Pengukuran kinerja telah mempengaruhi penyesuaian Aktivitas dalam mencapai kinerja</li>
+                                    <li>Pengukuran kinerja telah mempengaruhi penyesuaian Anggaran dalam mencapai kinerja</li>
+                                    <li>Terdapat efisiensi atas penggunaan anggaran dalam mencapai kinerja</li>
+                                    <li>Setiap unit/satuan kerja memahami dan peduli atas hasil pengukuran kinerja</li>
+                                    <li>Setiap pegawai memahami dan peduli atas hasil pengukuran kinerja</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Komponen 3 -->
+            <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                <h3>Komponen 3. PELAPORAN KINERJA</h3>
+                <div class="accordion" id="accordionTab3">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading1Tab3">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1Tab3" aria-expanded="true" aria-controls="collapse1Tab3">
+                                Terdapat Dokumen Laporan yang menggambarkan Kinerja
+                            </button>
+                        </h2>
+                        <div id="collapse1Tab3" class="accordion-collapse collapse" aria-labelledby="heading1Tab3" data-bs-parent="#accordionTab3">
+                            <div class="accordion-body">
+                                <br>
+                                <ol>
+                                    <li>Dokumen Laporan Kinerja telah disusun</li>
+                                    <li>Dokumen Laporan Kinerja telah disusun secara berkala</li>
+                                    <li>Dokumen Laporan Kinerja telah diformalkan</li>
+                                    <li>Dokumen Laporan Kinerja telah direviu</li>
+                                    <li>Dokumen Laporan Kinerja telah dipublikasikan</li>
+                                    <li>Dokumen Laporan Kinerja telah disampaikan tepat waktu</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading2Tab3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2Tab3" aria-expanded="false" aria-controls="collapse2Tab3">
+                                Dokumen Laporan Kinerja telah memenuhi Standar menggambarkan Kualitas atas Pencapaian Kinerja, informasi keberhasilan/kegagalan kinerja serta upaya perbaikan/penyempurnaannya
+                            </button>
+                        </h2>
+                        <div id="collapse2Tab3" class="accordion-collapse collapse" aria-labelledby="heading2Tab3" data-bs-parent="#accordionTab3">
+                            <div class="accordion-body">
+                                <br>
+                                <ol>
+                                    <li>Dokumen Laporan Kinerja disusun secara berkualitas sesuai dengan standar</li>
+                                    <li>Dokumen Laporan Kinerja telah mengungkap seluruh informasi tentang pencapaian kinerja</li>
+                                    <li>Dokumen Laporan Kinerja telah menginfokan analisis dan evaluasi realisasi kinerja dengan target tahunan</li>
+                                    <li>Dokumen Laporan Kinerja telah menginfokan analisis dan evaluasi realisasi kinerja dengan target jangka menengah</li>
+                                    <li>Dokumen Laporan Kinerja telah menginfokan analisis dan evaluasi realisasi kinerja dengan realisasi kinerja tahuntahun sebelumnya</li>
+                                    <li>Dokumen Laporan Kinerja telah menginfokan analisis dan evaluasi realisasi kinerja dengan realiasi kinerja di level nasional/internasional (Benchmark Kinerja)</li>
+                                    <li>Dokumen Laporan Kinerja telah menginfokan kualitas atas capaian kinerja beserta upaya nyata dan/atau hambatannya</li>
+                                    <li>Dokumen Laporan Kinerja telah menginfokan efisiensi atas penggunaan sumber daya dalam mencapai kinerja</li>
+                                    <li>Dokumen Laporan Kinerja telah menginfokan upaya perbaikan dan penyempurnaan kinerja ke depan (Rekomendasi perbaikan kinerja)</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading3Tab3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3Tab3" aria-expanded="false" aria-controls="collapse3Tab3">
+                                Pelaporan Kinerja telah memberikan dampak yang besar dalam penyesuaian strategi/kebijakan dalam mencapai kinerja berikutnya
+                            </button>
+                        </h2>
+                        <div id="collapse3Tab3" class="accordion-collapse collapse" aria-labelledby="heading3Tab3" data-bs-parent="#accordionTab3">
+                            <div class="accordion-body">
+                                <br>
+                                <ol>
+                                    <li>Informasi dalam laporan kinerja selalu menjadi perhatian utama pimpinan (Bertanggung Jawab)</li>
+                                    <li>Penyajian informasi dalam laporan kinerja menjadi kepedulian seluruh pegawai</li>
+                                    <li>Informasi dalam laporan kinerja berkala telah digunakan dalam penyesuaian aktivitas untuk mencapai kinerja</li>
+                                    <li>Informasi dalam laporan kinerja berkala telah digunakan dalam penyesuaian penggunaan anggaran untuk mencapai kinerja</li>
+                                    <li>Informasi dalam laporan kinerja telah digunakan dalam evaluasi pencapaian keberhasilan kinerja</li>
+                                    <li>Informasi dalam laporan kinerja telah digunakan dalam penyesuaian perencanaan kinerja yang akan dihadapi berikutnya</li>
+                                    <li>Informasi dalam laporan kinerja selalu mempengaruhi perubahan budaya kinerja organisasi</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Komponen 4 -->
+            <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
+                <h3>Komponen 4. EVALUASI AKUNTABILITAS KINERJA INTERNAL</h3>
+                <div class="accordion" id="accordionTab4">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading1Tab4">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1Tab4" aria-expanded="true" aria-controls="collapse1Tab4">
+                                Evaluasi Akuntabilitas Kinerja Internal telah dilaksanakan
+                            </button>
+                        </h2>
+                        <div id="collapse1Tab4" class="accordion-collapse collapse" aria-labelledby="heading1Tab4" data-bs-parent="#accordionTab4">
+                            <div class="accordion-body">
+                                <br>
+                                <ol>
+                                    <li>Terdapat pedoman teknis Evaluasi Akuntabilitas Kinerja Internal</li>
+                                    <li>Evaluasi Akuntabilitas Kinerja Internal telah dilaksanakan pada seluruh unit kerja/perangkat daerah</li>
+                                    <li>Evaluasi Akuntabilitas Kinerja Internal telah dilaksanakan secara berjenjang</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading2Tab4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2Tab4" aria-expanded="false" aria-controls="collapse2Tab4">
+                                Evaluasi Akuntabilitas Kinerja Internal telah dilaksanakan secara berkualitas dengan Sumber Daya yang memadai
+                            </button>
+                        </h2>
+                        <div id="collapse2Tab4" class="accordion-collapse collapse" aria-labelledby="heading2Tab4" data-bs-parent="#accordionTab4">
+                            <div class="accordion-body">
+                                <br>
+                                <ol>
+                                    <li>Evaluasi Akuntabilitas Kinerja Internal telah dilaksanakan sesuai standar</li>
+                                    <li>Evaluasi Akuntabilitas Kinerja Internal telah dilaksanakan oleh SDM yang memadai</li>
+                                    <li>Evaluasi Akuntabilitas Kinerja Internal telah dilaksanakan dengan pendalaman yang memadai</li>
+                                    <li>Evaluasi Akuntabilitas Kinerja Internal telah dilaksanakan pada seluruh unit kerja/perangkat daerah</li>
+                                    <li>Evaluasi Akuntabilitas Kinerja Internal telah dilaksanakan menggunakan Teknologi Informasi (Aplikasi)</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading3Tab4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3Tab4" aria-expanded="false" aria-controls="collapse3Tab4">
+                                Implementasi SAKIP telah meningkat karena evaluasi Akuntabilitas Kinerja Internal sehingga memberikan kesan yang nyata (dampak) dalam efektifitas dan efisiensi Kinerja
+                            </button>
+                        </h2>
+                        <div id="collapse3Tab4" class="accordion-collapse collapse" aria-labelledby="heading3Tab4" data-bs-parent="#accordionTab4">
+                            <div class="accordion-body">
+                                <br>
+                                <ol>
+                                    <li>Seluruh rekomendasi atas hasil evaluasi akuntablitas kinerja internal telah ditindaklanjuti</li>
+                                    <li>Telah terjadi peningkatan implementasi SAKIP dengan melaksanakan tindak lanjut atas rerkomendasi hasil evaluasi akuntablitas Kinerja internal</li>
+                                    <li>Hasil Evaluasi Akuntabilitas Kinerja Internal telah dimanfaatkan untuk perbaikan dan peningkatan akuntabilitas kinerja</li>
+                                    <li>Hasil dari Evaluasi Akuntabilitas Kinerja Internal telah dimanfaatkan dalam mendukung efektifitas dan efisiensi kinerja</li>
+                                    <li>Telah terjadi perbaikan dan peningkatan kinerja dengan memanfaatkan hasil evaluasi akuntablitas kinerja internal</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col md-6">
+                <div class="card card-round card-success">
+                    <h5 class="card-header">Jenis Inovasi SAKIP</h5>
+                    <ol>
+                        <li>Kebijakan/regulasi</li>
+                        <li>Teknologi Kesehatan</li>
+                        <li>Teknologi Sistem Informasi</li>
+                        <li>Pelayanan Publik</li>
+                        <li>Budaya Kerja</li>
+                        <li>Metode Kerja/SOP</li>
+                        <li>MoU/perjanjian</li>
+                        <li>Produk Prototipe</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="col md-6">
+                <div class="card card-round card-success">
+                    <h5 class="card-header">Kriteria Inovasi</h5>
+                    <ol>
+                        <li>Pembaharuan/ orisinil/ modifikasi</li>
+                        <li>Memudahkan pelayanan</li>
+                        <li>Mempercepat pelayanan</li>
+                        <li>Disebarluaskan</li>
+                        <li>Bermanfaat</li>
+                        <li>Spesifik</li>
+                        <li>Berkelanjutan</li>
+                        <li>Solusi/ upaya pemecahan masalah</li>
+                        <li>Dapat dihargai: a. Diaplikasikan di Internal satker</li>
+                        <li>Dapat dihargai: b. Diadopsi satker serumpun</li>
+                        <li>Dapat dihargai: c. Diadopsi satker eksternal di luar rumpun</li>
+                        <li>Percontohan Nasional: Diadopsi satker serumpun (90%)</li>
+                        <li>Percontohan Nasional: Diadopsi satker di luar rumpun (50%) </li>
+                        <li>Percontohan Nasional: Diadopsi satker IP lain</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer class="text-center">
+        <p>@fhy3273</p>
+    </footer>
+    
+    <!-- Theme Settings Modal -->
+    <div class="modal fade" id="themeSettingsModal" tabindex="-1" aria-labelledby="themeSettingsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="themeSettingsModalLabel">Theme Settings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3 form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="darkModeSwitch">
+                        <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
+                    </div>
+                    <hr>
+                    <p class="mb-2">Color Theme:</p>
+                    <div class="d-flex justify-content-around">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="colorTheme" id="colorThemeBlue" value="blue">
+                            <label class="form-check-label" for="colorThemeBlue">
+                                <span class="color-swatch bg-primary"></span> Blue
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="colorTheme" id="colorThemeGreen" value="green">
+                            <label class="form-check-label" for="colorThemeGreen">
+                                <span class="color-swatch bg-success"></span> Green
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="colorTheme" id="colorThemeOrange" value="orange" checked>
+                            <label class="form-check-label" for="colorThemeOrange">
+                                <span class="color-swatch bg-warning"></span> Orange
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Content Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel">Information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="infoModalBody">
+                    <!-- Content will be injected here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Custom JavaScript -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
