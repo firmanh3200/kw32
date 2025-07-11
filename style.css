@@ -1,12 +1,12 @@
 /* Default/Light Theme Variables */
 :root {
-    --bs-body-bg: #f8f9fa; /* Light grey background */
+    --bs-body-bg: #f8f8f7; /* Light grey background */
     --bs-body-color: #212529; /* Dark text */
     --bs-border-color: #dee2e6; /* Light grey border */
     --bs-body-color-rgb: 33,37,41; /* For shadows */
 
     /* Navbar */
-    --bs-navbar-bg: var(--bs-light);
+    --bs-navbar-bg: rgba(247, 191, 8, 0.55);
     --bs-navbar-color: var(--bs-dark);
     --bs-navbar-brand-color: var(--bs-dark);
     --bs-navbar-nav-link-color: rgba(0,0,0,.55);
@@ -39,7 +39,7 @@ body {
 
 /* Navbar styles to use theme variables */
 .navbar {
-    background-color: var(--bs-navbar-bg) !important; /* Override Bootstrap's default bg */
+    background-color: rgba(255, 175, 2, 0.55); /* Override Bootstrap's default bg */
     border-bottom: 1px solid var(--bs-border-color);
     transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
     box-shadow: 0 0.125rem 0.25rem rgba(var(--bs-body-color-rgb), 0.075) !important;
