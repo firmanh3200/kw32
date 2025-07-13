@@ -6,19 +6,21 @@
     <title>KW32</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Custom CSS  
-    <link rel="stylesheet" href="style.css"> -->
+    <!-- Bootstrap Icons CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom CSS  -->
     <style>
         body {
             padding-top: 70px;
             background-color: var(--bs-body-bg);
             color: var(--bs-body-color);
             transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
+            min-height: 100vh; /* Ensure body takes full height for proper floating positioning */
         }
 
         /* Navbar styles to use theme variables */
         .navbar {
-            background-color: rgba(255, 175, 2, 0.55); /* Override Bootstrap's default bg */
+            background-color: var(--app-navbar-bg) !important; /* Use app-specific variable */
             border-bottom: 1px solid var(--bs-border-color);
             transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
             box-shadow: 0 0.125rem 0.25rem rgba(var(--bs-body-color-rgb), 0.075) !important;
@@ -94,18 +96,58 @@
             box-shadow: inset 0 -1px 0 var(--bs-accordion-border-color);
         }
         .accordion-body {
-            background-color: black;
-            color: white;
+            background-color: var(--app-accordion-body-bg); /* Use app-specific variable */
+            color: var(--app-accordion-body-color); /* Use app-specific variable */
         }
 
-        /* Dark Theme */
+        /* Default/Light Theme Variables */
+        :root,
+        body.light-theme {
+            --bs-body-bg: #f8f9fa;
+            --bs-body-color: #212529;
+            --bs-border-color: #dee2e6;
+            --bs-body-color-rgb: 33,37,41;
+
+            /* App-specific custom variables */
+            --app-navbar-bg: var(--bs-light); /* Default light navbar background */
+            --app-accordion-body-bg: var(--bs-white); /* Default light accordion body background */
+            --app-accordion-body-color: var(--bs-body-color); /* Default light accordion body text */
+
+            /* Bootstrap theme variables for other components */
+            --bs-navbar-color: var(--bs-dark);
+            --bs-navbar-brand-color: var(--bs-dark);
+            --bs-navbar-nav-link-color: rgba(0,0,0,.55);
+            --bs-navbar-active-link-color: var(--bs-primary);
+
+            --bs-nav-tabs-border-color: var(--bs-border-color);
+            --bs-nav-tabs-link-color: var(--bs-gray-600);
+            --bs-nav-tabs-link-active-color: var(--bs-body-color);
+            --bs-nav-tabs-link-active-bg: var(--bs-white);
+            --bs-nav-tabs-link-active-border-color: var(--bs-border-color);
+            --bs-tab-content-bg: var(--bs-white);
+
+            --bs-accordion-bg: var(--bs-white);
+            --bs-accordion-color: var(--bs-body-color);
+            --bs-accordion-border-color: var(--bs-border-color);
+            --bs-accordion-button-bg: var(--bs-white);
+            --bs-accordion-button-color: var(--bs-body-color);
+            --bs-accordion-button-active-bg: #e9ecef;
+            --bs-accordion-button-active-color: var(--bs-black);
+        }
+
+        /* Dark Theme Variables */
         body.dark-theme {
             --bs-body-bg: #212529; /* Dark grey */
             --bs-body-color: #f8f9fa; /* Light grey */
             --bs-border-color: rgba(255, 255, 255, 0.125);
             --bs-body-color-rgb: 248,249,250; /* For shadows in dark mode */
 
-            --bs-navbar-bg: #343a40 !important;
+            /* App-specific custom variables */
+            --app-navbar-bg: #343a40; /* Default dark navbar background */
+            --app-accordion-body-bg: #343a40; /* Darker grey for accordion body */
+            --app-accordion-body-color: #f8f9fa; /* Light text for accordion body */
+
+            /* Bootstrap theme variables for other components */
             --bs-navbar-color: #f8f9fa;
             --bs-navbar-brand-color: #f8f9fa;
             --bs-navbar-nav-link-color: rgba(255,255,255,.75);
@@ -127,39 +169,84 @@
             --bs-accordion-button-active-color: #f8f9fa;
         }
 
-        /* Light Theme (explicitly setting defaults for clarity, though it's the :root default) */
-        body.light-theme {
-            --bs-body-bg: #f8f9fa;
-            --bs-body-color: #212529;
-            --bs-border-color: #dee2e6;
-            --bs-body-color-rgb: 33,37,41;
+        /* Color Themes - Overrides for app-specific variables */
 
-            --bs-navbar-bg: var(--bs-light);
-            --bs-navbar-color: var(--bs-dark);
-            --bs-navbar-brand-color: var(--bs-dark);
-            --bs-navbar-nav-link-color: rgba(0,0,0,.55);
-            --bs-navbar-active-link-color: var(--bs-primary);
+        /* Orange Theme */
+        body.theme-orange {
+            --bs-primary: #fd7e14; /* Standard Bootstrap primary orange */
+            --app-navbar-bg: #FFB347; /* Specific orange for navbar */
+            --app-accordion-body-bg: #ffe0b2; /* Lighter orange for body */
+            --app-accordion-body-color: #333;
+        }
+        body.dark-theme.theme-orange {
+            --app-navbar-bg: #e69100; /* Darker orange for dark mode navbar */
+            --app-accordion-body-bg: #5c3b00; /* Darker orange for dark mode accordion body */
+            --app-accordion-body-color: #f8f9fa;
+        }
 
-            --bs-nav-tabs-border-color: var(--bs-border-color);
-            --bs-nav-tabs-link-color: var(--bs-gray-600);
-            --bs-nav-tabs-link-active-color: var(--bs-body-color);
-            --bs-nav-tabs-link-active-bg: var(--bs-white);
-            --bs-nav-tabs-link-active-border-color: var(--bs-border-color);
-            --bs-tab-content-bg: var(--bs-white);
+        /* Blue Theme */
+        body.theme-blue {
+            --bs-primary: #0d6efd; /* Bootstrap blue */
+            --app-navbar-bg: #add8e6; /* Light blue for navbar */
+            --app-accordion-body-bg: #e0f2f7; /* Lighter blue for body */
+            --app-accordion-body-color: #212529;
+        }
+        body.dark-theme.theme-blue {
+            --app-navbar-bg: #007bff; /* Darker blue for dark mode navbar */
+            --app-accordion-body-bg: #003366; /* Darker blue for dark mode accordion body */
+            --app-accordion-body-color: #f8f9fa;
+        }
 
-            --bs-accordion-bg: var(--bs-white);
-            --bs-accordion-color: var(--bs-body-color);
-            --bs-accordion-border-color: var(--bs-border-color);
-            --bs-accordion-button-bg: var(--bs-white);
-            --bs-accordion-button-color: var(--bs-body-color);
-            --bs-accordion-button-active-bg: #e9ecef;
-            --bs-accordion-button-active-color: var(--bs-black);
+        /* Green Theme */
+        body.theme-green {
+            --bs-primary: #198754; /* Bootstrap green */
+            --app-navbar-bg: #a2f2b3; /* Light green for navbar */
+            --app-accordion-body-bg: #d4f7e0; /* Lighter green for body */
+            --app-accordion-body-color: #212529;
+        }
+        body.dark-theme.theme-green {
+            --app-navbar-bg: #0b800b; /* Darker green for dark mode navbar */
+            --app-accordion-body-bg: #004d00; /* Darker green for dark mode accordion body */
+            --app-accordion-body-color: #f8f9fa;
+        }
+
+        /* Floating Theme Button */
+        .floating-button {
+            position: fixed;
+            bottom: 20px; /* Adjust as needed */
+            right: 20px; /* Adjust as needed */
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            z-index: 1050; /* Above Bootstrap modal backdrop (1040), below modal (1050) */
+        }
+
+        /* Theme Settings Panel */
+        .theme-settings-panel {
+            position: fixed;
+            top: 100px; /* Below the header */
+            right: 20px; /* Align with the button, adjust if needed */
+            width: 300px; /* Fixed width for the panel */
+            z-index: 1040; /* Lower than button, above general content */
+            background-color: var(--bs-body-bg); /* Use theme background */
+            border: 1px solid var(--bs-border-color);
+            border-radius: 0.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+            transform: translateX(calc(100% + 20px)); /* Hidden by default, 20px for padding/gap from screen edge */
+            transition: transform 0.3s ease-in-out; /* Smooth transition */
+        }
+
+        .theme-settings-panel.show {
+            transform: translateX(0); /* Show the panel */
         }
     </style>
 </head>
 <body>
     <!-- Sticky Header -->
-    <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm" style="background-color: #FFB347;">
+    <header class="navbar navbar-expand-lg fixed-top shadow-sm">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Buku Saku Wilkerstat SE2026</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -167,6 +254,38 @@
             </button>
         </div>
     </header>
+
+    <!-- Floating Theme Toggle Button -->
+    <button id="themeToggleBtn" class="btn btn-primary rounded-circle floating-button shadow">
+        <i class="bi bi-palette-fill"></i>
+    </button>
+
+    <!-- Theme Settings Floating Panel -->
+    <div id="themeSettingsPanel" class="theme-settings-panel card">
+        <div class="card-body">
+            <button type="button" class="btn-close float-end" aria-label="Close" id="closeThemePanelBtn"></button>
+            <h5 class="card-title mt-2">Ganti Tema</h5>
+            <div class="form-check form-switch mb-3">
+                <input class="form-check-input" type="checkbox" id="darkModeSwitch">
+                <label class="form-check-label" for="darkModeSwitch">Mode Gelap</label>
+            </div>
+            <div class="mb-2">
+                <strong>Warna:</strong>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="colorTheme" id="colorThemeOrange" value="orange" checked>
+                <label class="form-check-label" for="colorThemeOrange">Oranye</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="colorTheme" id="colorThemeBlue" value="blue">
+                <label class="form-check-label" for="colorThemeBlue">Biru</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="colorTheme" id="colorThemeGreen" value="green">
+                <label class="form-check-label" for="colorThemeGreen">Hijau</label>
+            </div>
+        </div>
+    </div>
 
     <main class="container my-4">
         <!-- Tab Navigation -->
@@ -269,7 +388,7 @@
                             <div class="accordion-body">
                                 <br>
                                 <ol>
-                                    <li>Melakukan rekonsiliasi sebanyak tiga kali bersama petugas pendataan lapangan (pemetaan).</li>
+                                    <li>Melakukan rekonsiliasi sebanyak three times bersama petugas pendataan lapangan (pemetaan).</li>
                                     <li>Mengisi kartu kendali rekonsiliasi (SE2026-WILKERSTAT.KKR).</li>
                                     <li>Sinkronisasi isian SE2026-WILKERSTAT.IDSLS dan PSLS pada saat rekonsiliasi pertama, kedua, dan ketiga.</li>
                                     <li>Memeriksa peta dan dokumen PSLS, SE2026-WILKERSTAT.LKM dan LK-Peta.
@@ -830,10 +949,10 @@
                             <div class="accordion-body">
                                 <br>
                                 <p>
-                                    “Usaha adalah suatu kegiatan dengan tujuan menghasilkan barang dan/atau jasa untuk memperoleh keuntungan dan/atau memenuhi kebutuhan sendiri “
+                                    "Usaha adalah suatu kegiatan dengan tujuan menghasilkan barang dan/atau jasa untuk memperoleh keuntungan dan/atau memenuhi kebutuhan sendiri "
                                     <ul>
                                         <li>Untuk setiap bangunan yang teridentifikasi sebagai 1 BKU maka juga akan terhitung minimal 1 perkiraan muatan usaha.</li>
-                                        <li>Untuk usaha di pasar/mall/pertokoan/perkantoran, jumlah perkiraan muatan usaha minimal sebanyak jumlah toko/tenant/kantor yang terdaftar pada bangunan tersebut. <br><br>Informasi jumlah perkiraan muatan usaha bisa didapatkan dengan bertanya pada pengelola (jumlah tenant/pedagang) serta dengan validasi perhitungan dengan tally.</li>
+                                        <li>For usaha di pasar/mall/pertokoan/perkantoran, jumlah perkiraan muatan usaha minimal sebanyak jumlah toko/tenant/kantor yang terdaftar pada bangunan tersebut. <br><br>Informasi jumlah perkiraan muatan usaha bisa didapatkan dengan bertanya pada pengelola (jumlah tenant/pedagang) serta dengan validasi perhitungan dengan tally.</li>
                                         <li>Untuk bangunan tempat tinggal (BTT) yang secara kasatmata terlihat memiliki usaha seperti warung, salon, atau terdapat baliho usaha, maka bangunan tersebut dihitung sebagai 1 BTT dan 1 perkiraan muatan usaha.</li>
                                         <li>Untuk bangunan khusus usaha yang secara kasatmata hanya terlihat seperti satu bangunan, namun terdapat banyak plang usaha maka dihitung sebagai 1 BKU dengan perkiraan jumlah usaha sebanyak plang pada bangunan tersebut.</li>
                                     </ul>
@@ -988,7 +1107,7 @@
             return `
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="${headingId}">
-                        <button class="accordion-button ${isFirstItem ? '' : 'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#${collapseId}" aria-expanded="${isFirstItem ? 'true' : 'false'}" aria-controls="${collapseId}">
+                        <button class="accordion-button ${isFirstItem ? '' : 'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#${collapseId}" aria-expanded="${isFirstItem ? 'true' : 'false'}" aria-controls="#${collapseId}">
                             ${headingText}
                         </button>
                     </h2>
@@ -1056,39 +1175,44 @@
             console.log(`Content loaded for tab: ${tabId}`);
         }
 
-        // Theme management functions
+        // THEME MANAGEMENT
         const STORAGE_KEY_THEME_MODE = 'themeMode';
         const STORAGE_KEY_THEME_COLOR = 'themeColor';
+
+        // New elements for theme toggle
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        const themeSettingsPanel = document.getElementById('themeSettingsPanel');
+        const closeThemePanelBtn = document.getElementById('closeThemePanelBtn');
 
         /**
         * Applies the selected theme to the document body and saves it to localStorage.
         * @param {string} mode 'light' or 'dark'
-        * @param {string} color 'blue', 'green', or 'orange'
+        * @param {string} color 'orange', 'blue', or 'green'
         */
         function applyTheme(mode, color) {
             const body = document.body;
-
+            
             // Remove existing mode classes
             body.classList.remove('light-theme', 'dark-theme');
             // Add the new mode class
             body.classList.add(`${mode}-theme`);
 
             // Remove existing color classes
-            body.classList.remove('theme-blue', 'theme-green', 'theme-orange');
+            body.classList.remove('theme-orange', 'theme-blue', 'theme-green');
             // Add the new color class
             body.classList.add(`theme-${color}`);
-
-            // Update localStorage
+            
+            // Save preferences in localStorage
             localStorage.setItem(STORAGE_KEY_THEME_MODE, mode);
             localStorage.setItem(STORAGE_KEY_THEME_COLOR, color);
 
-            // Update UI controls to reflect the current theme
+            // Update UI elements to reflect the current theme state
             const darkModeSwitch = document.getElementById('darkModeSwitch');
+            const colorThemeRadios = document.querySelectorAll('input[name="colorTheme"]');
+
             if (darkModeSwitch) {
                 darkModeSwitch.checked = (mode === 'dark');
             }
-
-            const colorThemeRadios = document.querySelectorAll('input[name="colorTheme"]');
             colorThemeRadios.forEach(radio => {
                 radio.checked = (radio.value === color);
             });
@@ -1096,12 +1220,18 @@
 
         /**
         * Loads the theme preference from localStorage and applies it.
-        * If no preference is found, applies default theme.
         */
         function loadTheme() {
             const savedMode = localStorage.getItem(STORAGE_KEY_THEME_MODE) || 'light';
-            const savedColor = localStorage.getItem(STORAGE_KEY_THEME_COLOR) || 'orange';
+            const savedColor = localStorage.getItem(STORAGE_KEY_THEME_COLOR) || 'orange'; // Default to orange
             applyTheme(savedMode, savedColor);
+        }
+
+        // Function to toggle theme settings panel visibility
+        function toggleThemeSettingsPanel() {
+            if (themeSettingsPanel) {
+                themeSettingsPanel.classList.toggle('show');
+            }
         }
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -1150,19 +1280,28 @@
 
             if (darkModeSwitch) {
                 darkModeSwitch.addEventListener('change', () => {
+                    const currentColor = document.querySelector('input[name="colorTheme"]:checked')?.value || 'orange';
                     const currentMode = darkModeSwitch.checked ? 'dark' : 'light';
-                    const currentColor = document.querySelector('input[name="colorTheme"]:checked')?.value || 'blue';
                     applyTheme(currentMode, currentColor);
                 });
             }
 
             colorThemeRadios.forEach(radio => {
                 radio.addEventListener('change', () => {
-                    const currentMode = darkModeSwitch.checked ? 'dark' : 'light';
+                    const currentMode = darkModeSwitch ? (darkModeSwitch.checked ? 'dark' : 'light') : 'light';
                     const currentColor = radio.value;
                     applyTheme(currentMode, currentColor);
                 });
             });
+
+            // Add event listeners for the new theme toggle functionality
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', toggleThemeSettingsPanel);
+            }
+
+            if (closeThemePanelBtn) {
+                closeThemePanelBtn.addEventListener('click', toggleThemeSettingsPanel); // Use the same toggle function to close
+            }
 
             // Info Modal event listener
             const infoModalElement = document.getElementById('infoModal');
