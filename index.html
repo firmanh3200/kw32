@@ -291,7 +291,10 @@
         <!-- Tab Navigation -->
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="true">P M L</button>
+                <button class="nav-link active" id="tab9-tab" data-bs-toggle="tab" data-bs-target="#tab9" type="button" role="tab" aria-controls="tab9" aria-selected="true">Monitoring</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="true">P M L</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="false">P P L</button>
@@ -319,8 +322,17 @@
 
         <!-- Tab Content - Content will be dynamically loaded by JavaScript -->
         <div class="tab-content border border-top-0 p-3" id="myTabContent">
+            <!-- Monitoring -->
+            <div class="tab-pane fade show active" id="tab9" role="tabpanel" aria-labelledby="tab9-tab">
+                <h3>Monitoring Web Wilkerstat</h3>
+                <br>
+                <div class="flourish-embed" data-src="story/3295390"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/story/3295390/thumbnail" width="100%" alt="visualization" /></noscript></div>
+                
+            </div>
+
+            
             <!-- PML -->
-            <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+            <div class="tab-pane fade" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
                 <h3>Tugas dan Tanggung Jawab PML</h3>
                 <br>
                 <p>
@@ -1178,8 +1190,7 @@
                     'Accordion Item #4 for Tab Six',
                     'Accordion Item #5 for Tab Six'
                 ]
-            }
-            ,
+            },
             tab8: {
                 title: 'Tab Eight',
                 accordions: [
@@ -1189,7 +1200,18 @@
                     'Accordion Item #4 for Tab Six',
                     'Accordion Item #5 for Tab Six'
                 ]
+            },
+            tab9: {
+                title: 'Tab Eight',
+                accordions: [
+                    'Accordion Item #1 for Tab Six',
+                    'Accordion Item #2 for Tab Six',
+                    'Accordion Item #3 for Tab Six',
+                    'Accordion Item #4 for Tab Six',
+                    'Accordion Item #5 for Tab Six'
+                ]
             }
+
         };
 
         // Content for the info buttons within accordions
